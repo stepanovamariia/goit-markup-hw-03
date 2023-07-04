@@ -15,11 +15,52 @@
 	overflow: hidden;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1158px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	outline: 2px solid red;
+}
+
+img {
+	display: block;
+}
+
 body {
 	font-family: Roboto, sans-serif;
 	background-color: var(--white);
 	color: #434455;
 	letter-spacing: 0.02em;
+}
+
+.header {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid var(--cornflower);
+	background: var(--white);
 }
 
 .link {
@@ -48,7 +89,21 @@ h3 {
 
 /**---HEADER----*/
 
+.header-container {
+	display: flex;
+	align-items: center;
+}
+.header-nav {
+	display: flex;
+	align-items: center;
+	gap: 76px;
+}
+
 .header-logo {
+	display: inline-flex;
+	height: 24px;
+	align-items: center;
+	flex-shrink: 0;
 	color: var(--iris);
 	font-size: 18px;
 	font-family: Raleway, sans-serif;
@@ -60,6 +115,12 @@ h3 {
 
 .header-logo-accent {
 	color: var(--navyblue);
+}
+
+.header-menu {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 40px;
 }
 
 .nav-link {
@@ -77,6 +138,7 @@ h3 {
 
 .address {
 	font-style: normal;
+	margin-left: auto;
 }
 
 .address-link {
@@ -90,13 +152,30 @@ h3 {
 	color: var(--ocean);
 }
 
+.address-link-menu {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
 /**------------ HERO-------------- */
 
 .hero {
 	background-color: var(--navyblue);
 }
 
+.hero-container {
+	dislay: flex;
+	flex-direction: column;
+
+	padding: 188px 141px;
+}
+
 .hero-title {
+	display: flex;
+	max-width: 496px;
+	flex-direction: column;
+	flex-shrink: 0;
+	margin: 0 auto 48px;
 	color: var(--white);
 	text-align: center;
 	font-size: 56px;
@@ -106,6 +185,15 @@ h3 {
 }
 
 .hero-button {
+	display: flex;
+	padding: 16px 32px;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 0 auto;
+	padding: 16px 32px;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	color: var(--white);
 	background-color: var(--iris);
 	font-size: 16px;
@@ -120,6 +208,26 @@ h3 {
 .hero-button:focus {
 	background-color: var(--ocean);
 }
+/**------------ STUDIO-------------- */
+
+.studio {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.list-studio {
+	display: flex;
+	gap: 24px;
+}
+
+.list-item {
+	display: flex;
+	width: 264px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	width: calc((100% - 24px * 3) / 4);
+}
 
 /**------------ WE DOING-------------- */
 
@@ -131,15 +239,34 @@ h3 {
 	line-height: 1.11;
 	text-transform: capitalize;
 	letter-spacing: 0.02em;
+	padding-bottom: 72px;
+}
+
+.we-doing-list {
+	display: flex;
+
+	padding-bottom: 120px;
+	gap: 24px;
+	justify-content: space-between;
+}
+
+.we-doing-img {
+	display: flex;
+	width: calc((100% - 24px * 2) / 3);
 }
 
 /**------------ OUR TEAM-------------- */
 
 .our-team {
 	background-color: var(--cloud);
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 
+.our-team-container {
+}
 .our-team-header {
+	margin-bottom: 72px;
 	color: var(--navyblue);
 	text-align: center;
 	font-size: 36px;
@@ -149,16 +276,41 @@ h3 {
 	letter-spacing: 0.02em;
 }
 
+.our-team-list {
+	display: flex;
+	gap: 24px;
+	justify-content: space-between;
+}
 .team-list {
 	background-color: #ffffff;
+	max-width: 264px;
+	padding-bottom: 32px;
+	border-radius: 0px 0px 4px 4px;
+	background: var(--white, #fff);
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+		0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
+.team-list-header {
+	margin-top: 32px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.team-list-text {
+	text-align: center;
+}
 /**------------ FOOTER-------------- */
 
 footer {
 	background-color: var(--navyblue);
+	padding-top: 101.5px;
+	padding-bottom: 100px;
 }
 .footer-logo {
+	display: flex;
+	height: 24px;
 	color: var(--iris);
 	font-size: 18px;
 	font-family: Raleway, sans-serif;
@@ -166,6 +318,7 @@ footer {
 	line-height: 1.17;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	margin-bottom: 16px;
 }
 
 .footer-logo-accent {
@@ -177,6 +330,10 @@ footer {
 	font-size: 16px;
 	font-family: inherit;
 	line-height: 1.5;
+	display: flex;
+	width: 264px;
+	flex-direction: column;
+	flex-shrink: 0;
 }
 
 /**------------ PAGE PORTFOLIO-------------- */
